@@ -55,7 +55,7 @@ class Order {
       const merges = await this.fetchAll<GitlabMergeRequest>(
         `${API_URL}/projects/${projectId}/merge_requests?state=merged&updated_after=${since.toISOString()}`
       );
-      const lastCommit = commits[0]?.committed_date || "N/A";
+      const lastCommit = commits[0]?.committed_date || "";
 
       const branches = await this.fetchAll<any>(`${API_URL}/projects/${projectId}/repository/branches?`);
       const now = new Date();
