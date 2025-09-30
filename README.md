@@ -1,6 +1,6 @@
 # 📊 Send_Emails_Script
 
-Este projeto tem como objetivo gerar relatórios mensais sobre os repositórios da **Mamboo Tecnologia**, extraindo informações via **GitLab API** e exportando os dados em formato estruturado (Excel).
+Este projeto tem como objetivo gerar relatórios mensais sobre os repositórios de uma sitema de versionamento remoto , extraindo informações via **API** e exportando os dados em formato estruturado (Excel).
 
 Ele foi desenvolvido em **TypeScript**, utiliza **ESM (ECMAScript Modules)** e está preparado tanto para execução em ambiente de desenvolvimento quanto para compilação em produção.
 
@@ -12,7 +12,6 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 
 * [Node.js](https://nodejs.org/) v18.x ou v20.x
 * [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
-
 ---
 
 ## ⚙️ Configuração do Ambiente
@@ -20,8 +19,8 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 1. **Clone o repositório**:
 
 ```bash
-git clone https://gitlab.mamboo.co.ao/gitlab-instance-aefe1090/auditoria.git
-cd auditoria
+git clone https://github.com/ManuelPiresLuis01/Send_Emails_Script.git
+cd Send_Emails_Script
 ```
 
 2. **Instale as dependências**:
@@ -34,8 +33,13 @@ npm install
    Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
 
 ```env
-GITLAB_TOKEN=TOKEN COM TODAS AS PERMIÇÕES
-API_URL= URL DA API DA EMPRESA NO GITLAB
+GITLAB_TOKEN=STRING_YOUR_GITLAB_TOKEN_HERE
+API_URL=https://gitlab.com/api/v4
+SMTP_HOST=smtp.sempresa.com
+SMTP_PORT=587
+SMTP_USER=teu.email@empresa.com
+SMTP_PASS=sua_senha_ou_token
+EMAIL_TO=destinatario@empresa.com
 ```
 
 > 🔑 O token precisa ter permissões de leitura nos repositórios que serão auditados.
@@ -51,24 +55,6 @@ API_URL= URL DA API DA EMPRESA NO GITLAB
   ```
 
   Executa o projeto com **ts-node** diretamente em TypeScript.
-
-* **Build**
-
-  ```bash
-  npm run build
-  ```
-
-  Transpila o código para JavaScript em `dist/` e ajusta os imports.
-
-* **Produção**
-
-  ```bash
-  npm start
-  ```
-
-  Roda a versão compilada a partir de `dist/index.js`.
-
----
 
 ## 📦 Dependências Principais
 
@@ -90,8 +76,5 @@ API_URL= URL DA API DA EMPRESA NO GITLAB
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido por **Manuel Pires Luís** – [Mamboo Tecnologia](https://gitlab.mamboo.co.ao).
-
-Licença: **ISC**
-
+Projeto desenvolvido por **Manuel Pires Luís** .
 ---
