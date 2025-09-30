@@ -1,0 +1,28 @@
+{
+  "name": "auditoria",
+  "version": "1.0.0",
+  "description": "relatorio mensal dos repositorios mamboo",
+  "main": "dist/relatory.js",
+  "type": "module",
+  "scripts": {
+    "dev": "ts-node --esm ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.mamboo.co.ao/gitlab-instance-aefe1090/auditoria.git"
+  },
+  "author": "Manuel Pires Luís",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "exceljs": "^4.4.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^7.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/nodemailer": "^7.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
